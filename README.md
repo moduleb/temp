@@ -64,7 +64,7 @@
 
 #### Ответ
 
-Получаем [access-токен](#use-access_token) и [refresh-токен](#refresh_token).
+Получаем [access-токен](#use-access_token) и [refresh-токен](#use-refresh_token).
 
 ```json
 {
