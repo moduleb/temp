@@ -8,6 +8,7 @@
 * [Регистрация нового пользователя](#register)
 * [Получение access-токена](#get-access_token)
 * [Использование access-токена](#use-access_token)
+* [Использование refresh-токена](#use-refresh_token)
 * [Проверка access-токена](#check-access_token)
 
 
@@ -88,7 +89,7 @@
 
 ---
 
-<a name="refresh_token"></a>
+<a name="use-refresh_token"></a>
 ## Обновление пары access и refresh токенов
 `access_token`имеет срок жизни и при его истечении необходимо сделать запрос с `refresh_token` для получения
 нового.
