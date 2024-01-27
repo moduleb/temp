@@ -3,15 +3,18 @@
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
-# Работа с токенами
+# TasteMaker API v1
 
+## Работа с пользователями
 * [Регистрация нового пользователя](#register)
+
+## Работа с токенами
 * [Получение access-токена](#get-access_token)
 * [Проверка access-токена](#check-access_token)
 * [Использование access-токена](#use-access_token)
 * [Использование refresh-токена](#use-refresh_token)
 
-
+---
 
 <a name="register"></a>
 ## Регистрация нового пользователя
