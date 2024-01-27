@@ -7,9 +7,10 @@
 
 * [Регистрация нового пользователя](#register)
 * [Получение access-токена](#get-access_token)
+* [Проверка access-токена](#check-access_token)
 * [Использование access-токена](#use-access_token)
 * [Использование refresh-токена](#use-refresh_token)
-* [Проверка access-токена](#check-access_token)
+
 
 
 <a name="register"></a>
@@ -79,6 +80,34 @@
 
 ---
 
+<a name="check-access_token"></a>
+
+## Проверка access-токена
+
+
+```
+`POST http://127.0.0.1:8000/token/verify`
+```
+
+### Запрос
+
+```json
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA2MzQxMDQxLCJpYXQiOjE3MDYzNDA3NDEsImp0aSI6ImJiZjc4ZGQxMGI2NzQ5NTlhZjY1MzM1ZjZmNDBjNWIzIiwidXNlcl9pZCI6Mn0.pird2eYS2VCfeycWJMFFdVOIgDrTHRyF2CJQbnmY6mA"
+}
+```
+
+### Ответ
+
+Если токен прошел проверку придет пустой JSON со статус кодом `200`  
+
+
+#### Ошибки
+
+* `400 Bad Request` – ошибка в параметрах запроса.
+* `401 Unauthorized` - недействительный токен.
+---
+
 <a name="use-access_token"></a>
 ## Использование access-токена
 
@@ -129,31 +158,3 @@
 * `400 Bad Request` – ошибка в параметрах запроса.
 * `401 Unauthorized` - недействительный токен.
 
----
-
-<a name="check-access_token"></a>
-
-## Проверка access-токена
-
-
-```
-`POST http://127.0.0.1:8000/token/verify`
-```
-
-### Запрос
-
-```json
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA2MzQxMDQxLCJpYXQiOjE3MDYzNDA3NDEsImp0aSI6ImJiZjc4ZGQxMGI2NzQ5NTlhZjY1MzM1ZjZmNDBjNWIzIiwidXNlcl9pZCI6Mn0.pird2eYS2VCfeycWJMFFdVOIgDrTHRyF2CJQbnmY6mA"
-}
-```
-
-### Ответ
-
-Если токен прошел проверку придет пустой JSON со статус кодом `200`  
-
-
-#### Ошибки
-
-* `400 Bad Request` – ошибка в параметрах запроса.
-* `401 Unauthorized` - недействительный токен.
