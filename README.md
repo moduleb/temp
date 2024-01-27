@@ -37,6 +37,8 @@
 
 * `400 Bad Request` – ошибка в параметрах запроса.
 
+---
+
 <a name="get-access_token"></a>
 ## Получение access-токена
 
@@ -69,6 +71,7 @@
 * `400 Bad Request` – ошибка в параметрах запроса.
 * `401 Unauthorized` - Пользотель с такмми учетными данными не зарегестрирован.
 
+---
 
 <a name="use-access_token"></a>
 ## Использование access-токена
@@ -78,6 +81,7 @@
 
 ```Authorization: ACCESS_TOKEN```
 
+---
 
 <a name="refresh_token"></a>
 ## Обновление пары access и refresh токенов
@@ -119,6 +123,7 @@
 * `400 Bad Request` – ошибка в параметрах запроса.
 * `401 Unauthorized` - недействительный токен.
 
+---
 
 <a name="check-access_token"></a>
 
